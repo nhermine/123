@@ -16,12 +16,12 @@ constructor(){
     search = async () => {
       const response = await fetch(`https://api.tvmaze.com/search/shows?q=${this.state.movieData}`);
       const data = await response.json();
+      this.setState({movies: data});
     }
 
     change = (e) => {
     this.setState({movieData:e.target.value})
     }
-    //this.setState({movieData: data});
 
   render() {
     const content = this.state.movies.map((movie) => {
