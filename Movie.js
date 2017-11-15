@@ -10,7 +10,7 @@ class Movie extends React.Component {
 
         return (
             <div className="movie">
-                <p>{this.props.movie.score}<p/>
+                <p>{this.props.movie.score}</p>
             </div>
         )
     }
